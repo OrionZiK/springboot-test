@@ -24,3 +24,12 @@ alter table author drop addr;
 alter table author rename `authors`;
 drop table if exists `user`;
 desc authors;
+
+select * from authors;
+insert into `authors` (aut_name,gender,country,birthday,hobby) values('罗曼罗兰2','女','漂亮国','1969-1-14','旅游'),('齐泽克','男','英国','1999-10-11','看书');
+
+update `authors` set aut_name = '吴军';
+
+update `authors` set aut_name = '马化腾',country = '中国'where aut_id = 7;
+
+update `authors` set aut_name = '张三',country = '日本'where aut_id > 7;

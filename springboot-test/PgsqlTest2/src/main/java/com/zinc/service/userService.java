@@ -1,6 +1,7 @@
 package com.zinc.service;
 
 import com.zinc.entity.userEntity;
+import com.zinc.mapper.UserXmlMapper;
 import com.zinc.mapper.userMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,9 +14,17 @@ public class userService {
     @Autowired
     public userMapper Usermanager;
 
+    @Autowired
+    public UserXmlMapper xmlMapper;
+
     public List<userEntity> findall() {
         List<userEntity> list = Usermanager.findALL();
         return list;
+    }
+
+    public List<userEntity> findall2() {
+        List<userEntity> list2 = xmlMapper.findAll();
+        return list2;
     }
 
     public Integer save(userEntity entity) {

@@ -41,6 +41,13 @@ public class userController {
         return UsersService.save(entity);
     }
 
+//    @PostMapping("/change")
+//    public Integer change(@RequestBody userEntity entity) {
+//
+//        return UsersService.change(entity);
+//    }
+
+
     @DeleteMapping("/{id}")
     public Integer delete(@PathVariable Integer id) {
         return UsersService.DELETE(id);

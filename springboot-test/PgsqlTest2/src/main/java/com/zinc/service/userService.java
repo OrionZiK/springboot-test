@@ -34,6 +34,19 @@ public class userService {
             return Usermanager.update(entity);
         }
     }
+//    public Integer save(userEntity entity) {
+//
+//            return Usermanager.save(entity);
+//
+//    }
+//
+//    public Integer change(userEntity entity) {
+//
+//        return Usermanager.update(entity);
+//
+//    }
+
+
 
     public Integer DELETE(Integer id){
         return Usermanager.DELETE(id);

@@ -10,3 +10,16 @@ logging:
     org.springframework.boot.autoconfigure: debug
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+person:
+  name: kkkkk${random.uuid}
+  age: ${random.int}
+  happy: false
+  birth: 2019/11/02
+  maps: {k1: v1,K2: v2}
+  lists:
+    - code
+    - music
+    - girl
+  dog:
+    name: 旺财
+    age: 3

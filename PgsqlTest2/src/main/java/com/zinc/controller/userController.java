@@ -2,6 +2,7 @@ package com.zinc.controller;
 
 
 import com.zinc.entity.userEntity;
+import com.zinc.mapper.UserXmlMapper;
 import com.zinc.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,10 +16,23 @@ public class userController {
     @Autowired
     private userService UsersService;
 
-    @GetMapping("/")
+    @Autowired
+    UserXmlMapper userXmlMapper;
+
+
+
+    @GetMapping("/findall")
     public List<userEntity> findall() {
 
         return UsersService.findall();
+
+    }
+
+    @GetMapping("/findall2")
+    public List<userEntity> findall2() {
+
+        return UsersService.findall2();
+
     }
 
     @PostMapping("/save")
@@ -26,6 +40,13 @@ public class userController {
 
         return UsersService.save(entity);
     }
+
+//    @PostMapping("/change")
+//    public Integer change(@RequestBody userEntity entity) {
+//
+//        return UsersService.change(entity);
+//    }
+
 
     @DeleteMapping("/{id}")
     public Integer delete(@PathVariable Integer id) {

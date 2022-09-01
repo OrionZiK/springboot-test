@@ -6,7 +6,7 @@
         update demo
         <set>
             <if test="username !=null">
-                user = #{username}
+                username = #{username},
             </if>
             <if test="password !=null">
                 password = #{password},
